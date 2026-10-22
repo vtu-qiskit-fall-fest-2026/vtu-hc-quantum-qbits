@@ -63,12 +63,12 @@
 
 ```mermaid
 flowchart LR
-    A[SMILES / CSV Input] --> B[RDKit Preprocessing<br/>Morgan FP + Descriptors]
-    B --> C[PCA Reduction<br/>Encoding in 0..π]
-    C --> D[Quantum Feature Map<br/>Angle / ZZ / IQP]
-    D --> E[Fidelity Kernel → QSVC]
-    B --> F[Classical Baselines<br/>RF / Ridge / RBF SVM]
-    E --> G[Model Comparison Dashboard]
+    A["SMILES or CSV Input"] --> B["RDKit Preprocessing: Morgan FP and Descriptors"]
+    B --> C["PCA Reduction and Angle Encoding"]
+    C --> D["Quantum Feature Map: Angle, ZZ, IQP"]
+    D --> E["Fidelity Kernel and QSVC"]
+    B --> F["Classical Baselines: RF, Ridge, RBF SVM"]
+    E --> G["Model Comparison Dashboard"]
     F --> G
 ```
 

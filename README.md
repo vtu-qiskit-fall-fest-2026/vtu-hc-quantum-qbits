@@ -61,15 +61,8 @@
 
 ## 🧩 Approach & Architecture
 
-```mermaid
-flowchart LR
-    A["SMILES or CSV Input"] --> B["RDKit Preprocessing: Morgan FP and Descriptors"]
-    B --> C["PCA Reduction and Angle Encoding"]
-    C --> D["Quantum Feature Map: Angle, ZZ, IQP"]
-    D --> E["Fidelity Kernel and QSVC"]
-    B --> F["Classical Baselines: RF, Ridge, RBF SVM"]
-    E --> G["Model Comparison Dashboard"]
-    F --> G
+```
+Input → Preprocessing → (Quantum: PCA → Feature Map → Fidelity Kernel → QSVC | Classical: RF / Ridge / RBF SVM) → Model Comparison
 ```
 
 - **Input** — SMILES strings, built-in benchmarks (Delaney ESOL, Molecular Activity Binary), or custom CSV upload with schema validation
